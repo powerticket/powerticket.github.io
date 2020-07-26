@@ -12,7 +12,7 @@
 
 theme                  : "minimal-mistakes-jekyll"
 remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
@@ -25,7 +25,7 @@ url                      : "https://powerticket.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "powerticket/powerticket.github.io"
 teaser                   : "/assets/images/nebula.jpg"
-logo                     : "/assets/images/github-logo.jpg"
+logo                     : "/assets/images/github-logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -94,10 +94,9 @@ analytics:
 # Site Author
 author:
   name             : "전원표"
-  avatar           : "/assets/images/jeon.jpg"
+  avatar           : "/assets/images/jeon_s.jpg"
   bio              : "**Python** 공부중"
   location         : "대한민국 서울"
-  email            : "mailto:jwp0530@gmail.com"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -105,6 +104,9 @@ author:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       url: "https://lab.ssafy.com/jwp0530"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "jwp0530@gmail.com"
     
 # Site Footer
 footer:
@@ -251,7 +253,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: "/_posts"
+      path: ""
       type: posts
     values:
       layout: single
