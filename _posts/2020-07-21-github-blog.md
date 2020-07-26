@@ -2,7 +2,7 @@
 
 ### 1. Repository 생성
 
-![image-20200721100349175](github_blog.assets/image-20200721100349175.png)
+![](2020-07-21-github-blog.assets/image-20200721100349175.png)
 
 - `{ID}.github.io`로 Repository name을 설정
 
