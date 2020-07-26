@@ -25,7 +25,7 @@ url                      : "https://powerticket.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "powerticket/powerticket.github.io"
 teaser                   : "/assets/images/nebula.jpg"
-logo                     : "/assets/images/JEON.jpg"
+logo                     : "/assets/images/github-logo.jpg"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 200
@@ -50,7 +50,7 @@ reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : blank # (default) uses feed.xml
 search                   : # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
@@ -94,17 +94,17 @@ analytics:
 # Site Author
 author:
   name             : "전원표"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/jeon.jpg"
   bio              : "**Python** 공부중"
   location         : "대한민국 서울"
-  email            : "jwp0530@gmail.com"
+  email            : "mailto:jwp0530@gmail.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:jwp0530@gmail.com"    
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/powerticket"
+    - label: "GitLab"
+      icon: "fab fa-fw fa-gitlab"
+      url: "https://lab.ssafy.com/jwp0530"
     
 # Site Footer
 footer:
@@ -120,7 +120,7 @@ footer:
       url: "https://github.com/powerticket"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
-      # url:
+      url: "https://lab.ssafy.com/jwp0530"
 
 # Reading Files
 include:
@@ -251,7 +251,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "/_posts"
       type: posts
     values:
       layout: single
