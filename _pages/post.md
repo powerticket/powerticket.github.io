@@ -8,5 +8,4 @@ layout: single
 
 # Post
 
-[portfolio.md](portfolio.md)
-
+> We don't make mistakes, just happy little accidents.

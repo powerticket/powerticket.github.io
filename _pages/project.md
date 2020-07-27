@@ -6,6 +6,6 @@ layout: single
 
 
 
-# Projects
+# Project
 
 > Done is better than perfect.

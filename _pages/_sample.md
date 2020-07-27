@@ -1,5 +1,5 @@
 ---
 title: ""
-permalink: /about/
+permalink: /_sample/
 layout: single
 ---
