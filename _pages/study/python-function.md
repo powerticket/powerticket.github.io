@@ -1,76 +1,10 @@
-# 함수(function) I
+함수(function) I
+
 - 함수(function)?
 - 함수의 Output
 - 함수의 Input
 
-## 들어가기전에
 
-다음의 코드를 봅시다. 무엇을 하는 코드일까요?
-
-```python
-values = [100, 75, 85, 90, 65, 95, 90, 60, 85, 50, 90, 80]
-
-total = 0
-cnt = 0
-
-for value in values:
-    total += value
-    cnt += 1
-
-mean = total / cnt
-
-total_var = 0
-
-for value in values:
-    total_var += (value - mean) ** 2
-
-sum_var = total_var / cnt
-
-target = sum_var
-  
-count = 0 
-
-while True : 
-    count += 1 
-    root = 0.5 * (target + (sum_var / target))  
-    if (abs(root - target) < 0.0000000000000001) : 
-        break 
-    target = root
-
-std_dev = target
-print(std_dev)
-```
-
-- 이해하기 쉬운가요? 그리고 만약 다른 곳에서 동일한 작업을 다시해야할 경우 어떻게 할까요?
-- 아래의 코드와 비교해 봅시다
-
-```python
-import math
-
-cnt = len(values)
-
-mean = sum(values) / cnt
-
-sum_var = sum(pow(value - mean, 2) for value in values) / cnt
-
-std_dev = math.sqrt(sum_var)
-
-print(std_dev)
-```
-
-- 더 간단하게 만들 수도 있을까요?
-
-```python
-from statistics import pstdev
-from statistics import stdev
-print(pstdev(values)) # 모집단 표준 편차
-print(stdev(values)) # Sampling 표준 편차
-```
-
-```python
-import random
-random.sample(range(1, 46), 6)
-```
 
 # 함수(function)
 특정한 기능(function)을 하는 코드의 묶음
@@ -86,11 +20,8 @@ alt="func.png">
 - 재사용성
 - 유지보수
 
-<center>
-    <img src="https://user-
-images.githubusercontent.com/18046097/61181741-2984fd80-a665-11e9-93b8-578c56689d0e.png",
-alt="programming principle">
-</center>
+
+
 
 ## 함수의 선언과 호출
 
@@ -115,69 +46,7 @@ def <함수이름>(parameter1, parameter2):
     return value
 ```
 
-### [연습] 세제곱 함수
-> 입력 받은 수를 세제곱하여 반환(return)하는 함수 `cube()`을 작성해보세요.
 
----
-
-**[입력 예시]**
-
-```py
-cube(2)
-```
-
-**[출력 예시]**
-
-8
-
-```python
-# 아래에 코드를 작성하세요.
-```
-
-```python
-pow(2, 3)
-```
-
-```python
-def cube(n):
-    return n ** 3 # 값, 또는 표현식이 들어갈 수 있다
-```
-
-```python
-cube(2)
-```
-
-### [실습] 사각형의 넓이와 둘레를 구하는 함수
-> 밑변(width)과 높이(height)를 입력받아 사각형의 넓이와 둘레를 반환(return)하는 함수 `rectangle()`을
-작성해보세요.
-
----
-
-**[입력 예시]**
-
-```py
-rectangle(30, 20)
-```
-
-**[출력 예시]**
-
-(600, 100)
-
-```python
-# 아래에 코드를 작성하세요.
-```
-
-```python
-def rectangle(width, height):
-    area = width * height
-    perimeter = (width + height) * 2
-    return (area, perimeter)
-```
-
-```python
-print(rectangle(30, 20))
-print(rectangle(50, 70))
-```
 
 <center>
     <img src="https://user-
@@ -190,11 +59,6 @@ alt="function descrpition">
 alt="function_example">
 </center>
 
-```python
-# 우리가 활용하는 print문도 파이썬에 지정된 함수입니다. 
-# 아래에서 'hi'는 argument이고 출력을 하게 됩니다.
-print('hi')
-```
 
 <center>
     <img src="https://user-
@@ -210,71 +74,7 @@ print(__builtins__)
 dir(__builtins__)
 ```
 
-```python
-# 매우 중요
-result = print('hi')
-print(result)
-print(type(result))
-```
 
-```python
-sorted_list = [5, 2, 3, 4, 1].sort()
-print(sorted_list)
-```
-
-```python
-def test(n):
-    return None
-
-t = test(1)
-print(t)
-print(type(t))
-```
-
-##### [연습] 함수를 만들기
-
-> 아래의 코드와 동일한 `my_max` 함수를 만들어주세요.
->
-> 정수를 두개 받아서, 큰 값을 출력합니다.
-
-```python
-my_max(1, 5)
-```
----
-```
-예시 출력)
-5가 더 큽니다
-```
-
-```python
-# 내장함수 max()를 확인해봅시다.
-```
-
-```python
-max(1, 5)
-```
-
-```python
-min(1, 5)
-```
-
-```python
-# 아래에 my_max 함수를 작성하고 호출하세요.
-```
-
-```python
-def my_max(n1, n2):
-    if n1 >= n2:
-        print(f'{n1}가 더 큽니다')
-    else:
-        print(f'{n2}가 더 큽니다')
-    return
-```
-
-```python
-# 해당 코드를 통해 올바른 결과가 나오는지 확인하세요.
-my_max(1, 5)
-```
 
 # 함수의 Output
 
@@ -286,37 +86,9 @@ my_max(1, 5)
 
 함수가 return 되거나 종료되면, 함수를 호출한 곳으로 돌아갑니다.
 
-### [연습] 함수를 정의하고 값을 반환해봅시다.
 
-> 리스트 두개를 받아 각각 더한 결과를 비교하여 값이 큰 리스트를 반환하는 함수를 만들어주세요.
 
-```python
-my_list_max([10, 3], [5, 9])
-```
----
-```
-예시 출력)
-[5, 9]
-```
-
-```python
-# 아래에 my_list_max 함수를 작성하고 호출하세요
-```
-
-```python
-def my_list_max(l1, l2):
-    if sum(l1) >= sum(l2):
-        print(l1)
-    else:
-        print(l2)
-```
-
-```python
-# 해당 코드를 통해 올바른 결과가 나오는지 확인하세요.
-my_list_max([10, 3], [5, 9])
-```
-
-# 함수의 입력(Input)
+## 함수의 입력(Input)
 
 ## 매개변수(parameter) & 인자(argument)
 
@@ -352,23 +124,7 @@ func(2)
 
 함수는 기본적으로 인자를 위치로 판단합니다.
 
-### [연습] 원기둥의 부피
 
-> 원기둥의 반지름(r)과 높이(h)를 받아서 부피를 return하는 함수 `cylinder()`를 작성하세요.
->
-> *원기둥 부피 = 밑면의 넓이 * 높이*
-
-```python
-def cylinder(r, h):
-    area = 3.14 * r * r
-    volume = area * h
-    return volume
-```
-
-```python
-print(cylinder(5,2))
-print(cylinder(2,5)) # 순서를 바꾸면 다른 값이 나옵니다.
-```
 
 <center>
     <img src="https://user-
@@ -388,20 +144,7 @@ def func(p1=v1):
     return p1
 ```
 
-### [연습] 기본 인자 값 활용
 
-> 이름을 받아서 다음과 같이 인사하는 함수 `greeting()`을 작성하세요. 이름이 길동이면, "길동, 안녕?" 이름이 없으면 "익명,
-안녕?" 으로 출력하세요.
-
-```python
-# 아래에 greeting 함수를 작성하세요.
-```
-
-```python
-def greeting(name='익명'):
-    return f'{name}, 안녕?'
-greeting()
-```
 
 * 기본 인자 값이 설정되어 있더라도 기존의 함수와 동일하게 호출 가능하다.
 
@@ -423,46 +166,11 @@ alt="function example 03">
 **\*주의\* 단, 기본 인자값(Default Argument Value)을 가지는 인자 다음에 기본 값이 없는 인자를 사용할 수는
 없습니다.**
 
-```python
-# 오류를 확인해봅시다.
-```
 
-```python
-def greeting(name='익명', grade):
-    return f'{grade}학년 {name}님, 환영합니다.'
-```
-
-```python
-# 수정해 봅시다.
-```
-
-```python
-def greeting(age, grade=4, name='익명'):
-    return f'{age}세 {grade}학년 {name}님, 환영합니다.'
-greeting(29)
-greeting(22, 3, '홍길동')
-```
 
 ### 키워드 인자 (Keyword Arguments)
 
 키워드 인자는 직접 변수의 이름으로 특정 인자를 전달할 수 있습니다.
-
-```python
-# 키워드 인자 예시
-```
-
-```python
-def greeting(age, name='익명'):
-    return f'{age}세 {name}님 환영합니다.'
-```
-
-```python
-# 호출 순서를 바꿔봅시다.
-```
-
-```python
-greeting('홍길동', 20)
-```
 
 * **단 아래와 같이 `키워드 인자`를 활용한 다음에 `위치 인자`를 활용할 수는 없습니다.**
 
@@ -613,45 +321,4 @@ alt="dictionary">
 #
 hi = dict(한국어='안녕',영어='hi', 독일어='guten tag', 프랑스어='bon jour')
 print(hi)
-```
-
-### [연습] 정의되지 않은 키워드 인자를 처리
-
-> `my_dict()` 함수를 만들어 실제로 dictionary 모습처럼 출력 함수를 작성하세요.
->
->
-
----
-
-```
-예시 출력)
-{'한국어': '안녕', '영어': 'hi', '독일어': 'Guten Tag'}
-```
-
-```python
-# 아래에 코드를 작성한 뒤 호출하세요.
-```
-
-```python
-def my_dict(**kwargs):
-    return kwargs
-my_dict(한국어='안녕')
-```
-
-```python
-# 사실은 dict()는 출력이 아니라 딕셔너리를 return 합니다. 
-```
-
-```python
-
-```
-
-```python
-# 딕셔너리를 return 하는 my_fake_dict() 를 작성하세요.
-```
-
-```python
-def my_fake_dict(**kwargs):
-    return dict(kwargs)
-my_fake_dict(한국어='안녕')
 ```

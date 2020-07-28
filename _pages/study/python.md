@@ -2,6 +2,18 @@
 
 ### Sort
 
+Primitive vs Reference
+
+Mutable vs Immutable
+
+Sequence
+
+Iterable
+
+Iterator
+
+Sequence
+
 Number
 
 String

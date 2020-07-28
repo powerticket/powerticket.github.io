@@ -10,6 +10,9 @@
 
 [점프 투 파이썬](https://wikidocs.net/book/1)
 
+[Can Integer Operations Overflow in Python?](https://mortada.net/can-integer-
+operations-overflow-in-python.html)
+
 
 
 ## Syntax
@@ -163,292 +166,111 @@ Identifier is a name of variable, function, module or class.
 - **Boolean**
 
 ### Number
-#### Integer
+#### Integer: `int`
 
 - No `long` type in python 3.x
+
 - No overflow at `int` type unlike C language.
+
 - Binary: `0b`, octal: `0o`, hexadecimal: `0x` number expressions
 
-**파이썬에서 표현할 수 있는 가장 큰 수**
-
-* 파이썬에서 가장 큰 숫자를 활용하기 위해 sys 모듈을 불러온다.
-* 파이썬은 기존 C 계열 프로그래밍 언어와 다르게 정수 자료형(integer)에서 오버플로우가 없다.
-* arbitrary-precision arithmetic를 사용하기 때문이다.
+  ```python
+  binary_number = 0b10
+  print(binary_number)
+  octal_number = 0o10
+  print(octal_number)
+  hexadecimal_number = 0x10
+  print(hexadecimal_number)
+  ```
 
-> **오버플로우(overflow)**
-- 데이터 타입 별로 사용할 수 있는 메모리의 크기가 제한되어 있다.
-- 표현할 수 있는 수의 범위를 넘어가는 연산을 하게 되면, 기대했던 값이 출력되지 않는 현상, 즉 메모리가 차고 넘쳐 흐르는 현상
+  ```python
+  import sys
+  print(sys.maxsize * sys.maxsize)
+  ```
 
-> **arbitrary-precision arithmetic**
-- [파이썬에서 아주 큰 정수를 표현할 때 사용하는 메모리의 크기 변화](https://mortada.net/can-integer-
-operations-overflow-in-python.html)
-- 사용할 수 있는 메모리양이 정해져 있는 기존의 방식과 달리, 현재 남아있는 만큼의 가용 메모리를 모두 수 표현에 끌어다 쓸 수 있는 형태
-- 특정 값을 나타내는데 4바이트가 부족하다면 5바이트, 더 부족하면 6바이트까지 사용할 수 있게 유동적으로 운용
 
-```python
-# n진수를 만들어보고, 출력해봅시다.
-binary_number = 0b10
-print(binary_number)
 
-octal_number = 0o10
-print(octal_number)
-
-hexadecimal_number = 0x10
-print(hexadecimal_number)
-```
+#### Floating point number: `float`
 
-```python
-import sys
-print(sys.maxsize * sys.maxsize)
-```
+- Not always same value because of floating point rounding error.
 
-### (2) `float` (부동소수점, 실수, floating point number)
-
-실수는 `float`로 표현됩니다.
+  ```python
+  print(bool(3.5 - 3.2 == 0.3))
+  ```
 
-다만, 실수를 컴퓨터가 표현하는 과정에서 부동소수점을 사용하며, 항상 같은 값으로 일치되지 않습니다. (floating point
-rounding error)
+  ```python
+  a = 3.5 - 3.2
+  b = 0.3
+  round(a, 2) == b
+  ```
 
-이는 컴퓨터가 2진수(비트)를 통해 숫자를 표현하는 과정에서 생기는 오류이며, 대부분의 경우는 중요하지 않으나 값을 같은지 비교하는 과정에서
-문제가 발생할 수 있습니다.
+  ```python
+  import sys
+  print(sys.float_info.epsilon)
+  abs(a - b) <= sys.float_info.epsilon
+  ```
 
-```python
-# 변수에 실수를 넣고 해당 변수의 type을 알아봅시다.
-```
+  ```python
+  import math
+  math.isclose(a, b)
+  ```
 
-```python
-b = 3.14
-print(type(b))
-```
+- Can use `E`(or `e`)-expression.
 
-#### 컴퓨터식 지수 표현 방식
-* e를 사용할 수도 있다. (e와 E 둘 중 어느 것을 사용해도 무방)
+  ```python
+  b = 314e-2
+  type(b)
+  ```
 
-```python
-# 컴퓨터식 지수 표현 방식을 사용해봅시다.
-```
 
-```python
-b = 314e-2
-type(b)
-```
 
-#### 실수의 연산
-* 실수의 경우 실제로 값을 처리하기 위해서는 조심할 필요가 있다.
+#### Complex number: `complex`
 
-```python
-# 실수의 덧셈을 해봅시다.
-```
+- Can be expressed by `j` and each complex numbers have both real and imagine part.
 
-```python
-3.5 + 3.2
-```
+  ```python
+  x = 3 + 4j
+  print(x.real); print(x.imag)
+  ```
 
-```python
-# 실수의 뺄셈을 해봅시다.
-```
+- Complex number expressed as string with no spaces also can be converted to `float` type
 
-```python
-3.5 - 3.2
-```
+  ```python
+  b = complex('3+4j')
+  type(b)
+  ```
 
-```python
-# 우리가 원하는대로 반올림을 해봅시다.
-# round() 는 0~4는 내림, 5는 동일하게 작동하지 않고 반올림 방식에 따라 다릅니다.
-# 짝수에서 5는 내림 / 홀수에서 5는 올림
-```
+  
 
-```python
-round(3.5 - 3.2, 2)
-```
+### String
 
-```python
-# 두 개의 값이 같은지 확인해봅시다.
-```
+* Can express using single quotes(`'`), double quotes(`"`).
 
-```python
-print(3.5 - 3.2)
-print(0.3)
-3.5 - 3.2 == 0.3
-```
+  ```python
+  print('Hello, World!')
+  ```
 
-* 따라서 다음과 같은 방법으로 처리 할 수 있다. (이외에 다양한 방법이 있음)
+* Triple single or double quotes are expression of multi-line.
 
-```python
-# 1. 기본적인 처리방법을 알아봅시다.
-```
+  ```python
+  """multi
+  lines
+  """
+  '''multi
+  lines
+  '''
+  ```
 
-```python
-a = 3.5 - 3.2
-b = 0.3
-round(a, 2) == b
-```
 
-```python
-# 2. sys 모듈을 통해 처리하는 방법을 알아봅시다.
-# `epsilon` 은 부동소수점 연산에서 반올림을 함으로써 발생하는 오차 상환
-```
 
-```python
-import sys
-print(sys.float_info.epsilon)
+### Escape sequence
 
-abs(a - b) <= sys.float_info.epsilon
-```
+- Use escape sequence(`\`) to disguish special character.
 
-```python
-# 3. python 3.5부터 활용 가능한 math 모듈을 통해 처리하는 법을 알아봅시다.
-```
-
-```python
-import math
-math.isclose(a, b)
-```
-
-### (3) `complex` (복소수, complex number)
-
-각각 실수로 표현되는 실수부와 허수부를 가집니다.
-
-복소수는 허수부를 `j`로 표현합니다.
-
-```python
-# 변수에 복소수를 넣고 해당 변수의 type을 알아봅시다.
-```
-
-```python
-a = 3 + 4j
-type(a)
-```
-
-```python
-# 문자열을 복소수로 변환해봅시다.
-```
-
-```python
-b = complex('3+4j')
-type(b)
-```
-
-```python
-# 문자열을 변환할 때, 문자열은 중앙의 + 또는 - 연산자 주위에 공백을 포함해서는 안 됩니다.
-```
-
-```python
-b = complex('3 + 4j')
-type(b)
-```
-
-## 문자(String) 타입
-
-### 기본 활용법
-
-* 문자열은 Single quotes(`'`)나 Double quotes(`"`)을 활용하여 표현 가능하다.
-
-    - 작은따옴표: `'"큰" 따옴표를 담을 수 있습니다'`
-
-    - 큰따옴표: `"'작은' 따옴표를 담을 수 있습니다"`
-
-    - 삼중 따옴표: `'''세 개의 작은따옴표'''`, `"""세 개의 큰따옴표"""`
-
-
-* 단, 문자열을 묶을 때 동일한 문장부호를 활용해야하며, `PEP-8`에서는 **하나의 문장부호를 선택**하여 유지하도록 하고 있다.
-(Pick a rule and Stick to it)
-
-```python
-# 변수에 문자열을 넣고 출력해봅시다.
-```
-
-```python
-greeting = 'hello'
-type(greeting)
-```
-
-```python
-# 사용자에게 받은 입력은 기본적으로 str입니다.
-```
-
-```python
-number = input('숫자를 입력해주세요 : ')
-print(number * 2)
-number = input('숫자를 입력해주세요 : ')
-print(int(number) * 2)
-```
-
-#### 따옴표 사용
-
-문자열 안에 문장부호(`'`, `"`)가 사용될 경우 이스케이프 문자(`\`)를 활용 가능 합니다.
-
-```python
-# 문자열 안에 문장부호를 활용해서 오류를 확인해봅시다.
-```
-
-```python
-print("he's cool")
-print("그의 이름은 "ssafy"였다")
-```
-
-```python
-# 오류를 이스케이프 문자와 서로 다른 문장부호를 통해 해결해봅시다.
-```
-
-```python
-print("he's cool")
-print("그의 이름은 \"ssafy\"였다")
-```
-
-여러줄에 걸쳐있는 문장은 다음과 같이 표현 가능합니다.
-
-* `PEP-8`에 따르면 이 경우에는 반드시 `"""`를 사용하도록 되어 있다.
-
-```python
-# 여러줄을 출력해봅시다.
-```
-
-```python
-print("""
-이건
-여러 줄에 걸친
-문자열입니다.
-""")
-```
-
-```python
-# 문자열은 + 연산자로 이어붙이고, * 연산자로 반복시킬 수 있습니다.
-```
-
-```python
-# Concatenation -> 문자열 합치기
-print('Hello ' + 'ssafy')
-# Interpolation -> 문자열 반복
-print('Hello ' * 3)
-```
-
-```python
-# 변수화해서도 사용가능합니다.
-```
-
-```python
-name = 'john'
-
-'my name is ' * 2 + name * 2
-```
-
-```python
-# 두 개 이상의 문자열이 연속해서 나타나면 자동으로 이어 붙여집니다.
-```
-
-```python
-'hello' 'ssafy'
-```
-
-### 이스케이프 시퀀스
-
-문자열을 활용하는 경우 특수문자 혹은 조작을 하기 위하여 사용되는 것으로 `\`를 활용하여 이를 구분합니다.
-
-|<center>예약문자</center>|내용(의미)|
+|<center>Reserved word</center>|Meaning|
 |:--------:|:--------:|
-|\n|줄 바꿈|
-|\t|탭|
+|\n|Line change|
+|\t|Tap|
 |\r|캐리지리턴|
 |\0|널(Null)|
 |\\\\ |`\`|
@@ -629,42 +451,19 @@ print(a)
 type(a)
 ```
 
-## 형변환(Type conversion, Typecasting)
 
-파이썬에서 데이터타입은 서로 변환할 수 있습니다.
 
-- 암시적 형변환
-- 명시적 형변환
+## Type conversion & Typecasting
 
-### 암시적 형변환(Implicit Type Conversion)
+### Implicit type conversion
 
-사용자가 의도하지 않았지만, 파이썬 내부적으로 자동으로 형변환 하는 경우입니다.
-아래의 상황에서만 가능합니다.
 * bool
 * Numbers (int, float, complex)
 
 ```python
-# boolean과 integer는 더할 수 있을까요?
-```
-
-```python
 print(True + 3)
-print(False + 3)
-int(True)
-```
-
-```python
-result = None
-result + 3
-```
-
-```python
-check_passed = False
-check_passed + 3
-```
-
-```python
-# int, float, complex를 각각 변수에 대입해봅시다.
+print(False + 3.14)
+print(True + 1 + 2j)
 ```
 
 ```python
@@ -674,87 +473,23 @@ complex_number = 2 + 3j
 ```
 
 ```python
-# int와 float를 더해봅시다. 그 결과의 type은 무엇일까요?
-```
-
-```python
 print(int_number + float_number)
 print(type(int_number + float_number))
 ```
 
-```python
-# int와 complex를 더해봅시다. 그 결과의 type은 무엇일까요?
-```
 
-```python
-print(int_number + complex_number)
-print(type(int_number + complex_number))
-```
 
-### 명시적 형변환(Explicit Type Conversion)
-위의 상황을 제외하고는 모두 명시적으로 형 변환을 해주어야합니다.
+### Explicit type conversion
 
-* string -> intger  : 형식에 맞는 숫자만 가능
-* integer -> string : 모두 가능
+`int()`, `float()`, `complex()`, `string()`, `tuple()`, `list()`, `dict()`, `set()`
 
-암시적 형변환이 되는 모든 경우도 명시적으로 형변환이 가능합니다.
+* Proper form of string can be transformed to integer.
+* Every integer can be transformed to string.
+* Other various type can be transformed to another if it has proper form.
 
-* `int()` : string, float를 int로 변환
-* `float()` : string, int를 float로 변환
-* `str()` : int, float, list, tuple, dictionary를 문자열로 변환
 
-`list()`, `tuple()` 등은 다음 챕터에서 배울 예정입니다.
 
-```python
-# integer와 string 사이의 관계는 명시적으로 형변환을 해줘야만 합니다.
-```
-
-```python
-1 + '등'
-```
-
-```python
-# string 3을 integer로 변환해봅시다.
-```
-
-```python
-print('1' + '등')
-print(str(1) + '등')
-```
-
-```python
-# string 3.5를 float로 변환해봅시다.
-```
-
-```python
-type(float(3.5))
-```
-
-```python
-# string은 글자가 숫자일때만 형변환이 가능합니다.
-```
-
-```python
-float(3,5)
-```
-
-```python
-# string 3.5를 int로 변환할 수는 없습니다.
-```
-
-```python
-int('3.5')
-```
-
-```python
-# float 3.5는 int로 변환이 가능합니다.
-```
-
-```python
-int(float('3.5'))
-```
-
-# 연산자(Operator)
+# Operator
 
 - 산술 연산자
 - 비교 연산자
