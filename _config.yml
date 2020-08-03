@@ -107,6 +107,12 @@ author:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "malito:jwp0530@gmail.com"
+    - label: "HackerRank"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.hackerrank.com/jwp0530"
+    - label: "Baekjoon"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.acmicpc.net/user/jwp0530"
     
 # Site Footer
 footer:
