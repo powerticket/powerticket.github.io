@@ -12,3 +12,5 @@ main:
      url: /post/
    - title: "Principle"
      url: /principle/
+   - title: "Resume"
+     url: /bootstrap/index.html
