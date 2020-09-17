@@ -105,6 +105,6 @@ tags: [TAG]     # TAG names should always be lowercase
 
 ## 참고
 
-https://jekyllrb.com/docs/
+[](https://jekyllrb.com/docs/)
 
-https://github.com/cotes2020/jekyll-theme-chirpy
+[](https://github.com/cotes2020/jekyll-theme-chirpy)
