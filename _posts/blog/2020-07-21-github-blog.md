@@ -2,7 +2,7 @@
 title: "GitHub 블로그 만들기 (Windows 10 환경)"
 date: 2020-09-17 17:30:00 +0900
 categories: [Blog, Quick Start]
-tags: [blog, github pages]     # TAG names should always be lowercase
+tags: [blog, github pages]
 ---
 
 
@@ -15,7 +15,7 @@ tags: [blog, github pages]     # TAG names should always be lowercase
 
 우선 GitHub에 아래와 같이 새로운 Repository를 생성한다.
 
-![](2020-07-21-github-blog.assets/image-20200721100349175.png)
+![image-20200721100349175](/assets/img/2020-07-21-github-blog.assets/image-20200721100349175.png)
 
 - `id.github.io`로 Repository name을 설정
 
@@ -28,7 +28,7 @@ tags: [blog, github pages]     # TAG names should always be lowercase
 
 나는 Jekyll theme이 모여있는 [Jekyll Themes](http://jekyllthemes.org/)라는 사이트에서 마음에 드는 테마인 Chirpy를 골랐다. ([데모페이지](https://chirpy.cotes.info/))
 
-![image-20200917170358694](2020-07-21-github-blog.assets/image-20200917170358694.png)
+![image-20200917170358694](/assets/img/2020-07-21-github-blog.assets/image-20200917170358694.png)
 
 
 
@@ -61,7 +61,7 @@ gem "tzinfo-data"
 
 - 발생한 Dependency Error
 
-![image-20200917171600768](2020-07-21-github-blog.assets/image-20200917171600768.png)
+![image-20200917171600768](/assets/img/2020-07-21-github-blog.assets/image-20200917171600768.png)
 
 ```
 Dependency Error: Yikes! It looks like you don't have tzinfo or one of its dependencies installed. In order to use Jekyll as currently configured, you'll need to install this gem. If you've run Jekyll with `bundle exec`, ensure that you have included the tzinfo gem in your Gemfile as well. The full error message from Ruby is: 'cannot load such file -- tzinfo' If you run into trouble, you can find helpful resources at https://jekyllrb.com/help/!
@@ -69,7 +69,7 @@ Dependency Error: Yikes! It looks like you don't have tzinfo or one of its depen
 
 
 
-![image-20200917172124415](2020-07-21-github-blog.assets/image-20200917172124415.png)
+![image-20200917172124415](/assets/img/2020-07-21-github-blog.assets/image-20200917172124415.png)
 
 
 
