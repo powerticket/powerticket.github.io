@@ -1,190 +1,61 @@
-# Chirpy
+# GitHub Blog
 
-🌏 English • [简体中文](docs/README_zh-CN.md)
+## [블로그 만들기](https://powerticket.github.io/posts/github-blog/)
 
-[![Build Status](https://github.com/cotes2020/jekyll-theme-chirpy/workflows/build/badge.svg?branch=master&event=push)](https://github.com/cotes2020/jekyll-theme-chirpy/actions?query=branch%3Amaster+event%3Apush)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8220b926db514f13afc3f02b7f884f4b)](https://app.codacy.com/manual/cotes2020/jekyll-theme-chirpy?utm_source=github.com&utm_medium=referral&utm_content=cotes2020/jekyll-theme-chirpy&utm_campaign=Badge_Grade_Dashboard)
-[![GitHub license](https://img.shields.io/github/license/cotes2020/jekyll-theme-chirpy.svg)](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE)
-[![996.icu](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu)
+## [Font Awesome](https://fontawesome.com/)
 
-A minimal, sidebar, responsive web design Jekyll theme, focusing on text presentation, aim to help you easily record and share your knowledge. [Live Demo »](https://chirpy.cotes.info)
+### How to use
 
-[![Devices Mockup](https://raw.githubusercontent.com/cotes2020/jekyll-theme-chirpy/master/assets/img/sample/devices-mockup.png)](https://chirpy.cotes.info)
+## Favicon
 
-## Table of Contents
+### How to use
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [Support](#support)
-- [License](#license)
+## [Shields.io](https://shields.io/)
 
-## Features
+### How to use
 
-- Pinned Posts
-- Configurable theme mode
-- Double-level Categories
-- Last modified date for posts
-- Table of Contents
-- Automatically recommend related posts
-- Syntax highlighting
-- Mathematical expressions
-- Search
-- Atom Feeds
-- Disqus Comments
-- Google Analytics
-- GA Pageviews reporting (Advanced)
-- SEO and Performance Optimization
+#### Basic
 
-## Installation
-
-[Fork **Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork) on GitHub, and clone the fork to local by:
-
-```terminal
-$ git clone git@github.com:<username>/jekyll-theme-chirpy -b master --single-branch
+```
+https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
 ```
 
-### Setting up the local envrionment
+[![img](https://camo.githubusercontent.com/c28a9e2a6b42fe8427e78b1151235e98a195dc53/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2533434c4142454c2533452d2533434d4553534147452533452d253343434f4c4f52253345)](https://camo.githubusercontent.com/c28a9e2a6b42fe8427e78b1151235e98a195dc53/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2533434c4142454c2533452d2533434d4553534147452533452d253343434f4c4f52253345)
 
-If you would like to run or build the project on your local machine, please follow the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of `Ruby`, `RubyGems` and `Bundler`. 
+#### Style & Logo
 
-Before running or building for the first time, please complete the installation of the Jekyll plugins. Go to the root directory of project and run:
-
-```terminal
-$ bundle install
+```
+?style=flat&logo=python
 ```
 
-`bundle` will automatically install all the dependencies specified by `Gemfile`.
+[![img](https://camo.githubusercontent.com/17d76fb0ba1ab96d7ef0c219711cd7fdb8b71543/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2533434c4142454c2533452d2533434d4553534147452533452d253343434f4c4f522533453f7374796c653d666c6174266c6f676f3d707974686f6e)](https://camo.githubusercontent.com/17d76fb0ba1ab96d7ef0c219711cd7fdb8b71543/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2533434c4142454c2533452d2533434d4553534147452533452d253343434f4c4f522533453f7374796c653d666c6174266c6f676f3d707974686f6e)
 
-In order to generate some extra files (*categories*, *tags* and *last modified list*), we need to use some tool scripts. And they require dependency package [yq](https://github.com/mikefarah/yq#install) to be installed. What's more, if your machine is running Debian or macOS, you also need to install [GNU coreutils](https://www.gnu.org/software/coreutils/):
+#### Git
 
-- Debian
+| Github All Contributors:                                     | [![Github All Contributors badge](https://camo.githubusercontent.com/dc6b55fadfa2d8c830565a184459a3201e149c16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f616c6c253230636f6e7472696275746f72732d36362d627269676874677265656e)](https://camo.githubusercontent.com/dc6b55fadfa2d8c830565a184459a3201e149c16/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f616c6c253230636f6e7472696275746f72732d36362d627269676874677265656e) | `/github/all-contributors/:user/:repo/:branch*`              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| GitHub commit activity:                                      | [![GitHub commit activity badge](https://camo.githubusercontent.com/9e3f62c3742033363ca97cc59ad5848f9573e244/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d697425323061637469766974792d3435372532466d6f6e74682d626c7565)](https://camo.githubusercontent.com/9e3f62c3742033363ca97cc59ad5848f9573e244/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d697425323061637469766974792d3435372532466d6f6e74682d626c7565) | `/github/commit-activity/:interval/:user/:repo`              |
+| GitHub commits since tagged version:                         | [![GitHub commits since tagged version badge](https://camo.githubusercontent.com/04db80832f02a2a92acb0c2c13c7ae5eb388ef57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e342e372d342e326b2d626c7565)](https://camo.githubusercontent.com/04db80832f02a2a92acb0c2c13c7ae5eb388ef57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e342e372d342e326b2d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*`        |
+| GitHub commits since tagged version (branch):                | [![GitHub commits since tagged version (branch) badge](https://camo.githubusercontent.com/04db80832f02a2a92acb0c2c13c7ae5eb388ef57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e342e372d342e326b2d626c7565)](https://camo.githubusercontent.com/04db80832f02a2a92acb0c2c13c7ae5eb388ef57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e342e372d342e326b2d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*`        |
+| GitHub commits since latest release (by date):               | [![GitHub commits since latest release (by date) badge](https://camo.githubusercontent.com/b0920172cb1c65441e390fe466b20a5de2325016/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e352e372d3135372d626c7565)](https://camo.githubusercontent.com/b0920172cb1c65441e390fe466b20a5de2325016/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e352e372d3135372d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*`        |
+| GitHub commits since latest release (by date) for a branch:  | [![GitHub commits since latest release (by date) for a branch badge](https://camo.githubusercontent.com/b0920172cb1c65441e390fe466b20a5de2325016/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e352e372d3135372d626c7565)](https://camo.githubusercontent.com/b0920172cb1c65441e390fe466b20a5de2325016/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e6365253230332e352e372d3135372d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*`        |
+| GitHub commits since latest release (by date including pre-releases): | [![GitHub commits since latest release (by date including pre-releases) badge](https://camo.githubusercontent.com/610cad40cc0213f6b08ef862e0bfa02deb068dd9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076332e352e382d2d616c7068612e312d3135382d626c7565)](https://camo.githubusercontent.com/610cad40cc0213f6b08ef862e0bfa02deb068dd9/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076332e352e382d2d616c7068612e312d3135382d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*?include_prereleases` |
+| GitHub commits since latest release (by SemVer):             | [![GitHub commits since latest release (by SemVer) badge](https://camo.githubusercontent.com/bcb20680a8fc83fc1772e7ff8fd37d39ce7ae88c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076342e302e312d3230302d626c7565)](https://camo.githubusercontent.com/bcb20680a8fc83fc1772e7ff8fd37d39ce7ae88c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076342e302e312d3230302d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*?sort=semver` |
+| GitHub commits since latest release (by SemVer including pre-releases): | [![GitHub commits since latest release (by SemVer including pre-releases) badge](https://camo.githubusercontent.com/9c6531fee26927ff3ccd2cda88f7a70c02e317b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076342e302e322d2d616c7068612e312d3230312d626c7565)](https://camo.githubusercontent.com/9c6531fee26927ff3ccd2cda88f7a70c02e317b2/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6d6d69747325323073696e636525323076342e302e322d2d616c7068612e312d3230312d626c7565) | `/github/commits-since/:user/:repo/:version/:branch*?include_prereleases&sort=semver` |
+| GitHub contributors:                                         | [![GitHub contributors badge](https://camo.githubusercontent.com/1834ef986293304bad6fefc724d3fd56874ccd3d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6e7472696275746f72732d3339372d627269676874677265656e)](https://camo.githubusercontent.com/1834ef986293304bad6fefc724d3fd56874ccd3d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f6e7472696275746f72732d3339372d627269676874677265656e) | `/github/:variant/:user/:repo`                               |
+| GitHub last commit:                                          | [![GitHub last commit badge](https://camo.githubusercontent.com/addcd18fb44439630d29e4fdeacc5b2b7d02de77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c617374253230636f6d6d69742d6a756c79253230323031332d726564)](https://camo.githubusercontent.com/addcd18fb44439630d29e4fdeacc5b2b7d02de77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c617374253230636f6d6d69742d6a756c79253230323031332d726564) | `/github/last-commit/:user/:repo`                            |
+| GitHub last commit (branch):                                 | [![GitHub last commit (branch) badge](https://camo.githubusercontent.com/addcd18fb44439630d29e4fdeacc5b2b7d02de77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c617374253230636f6d6d69742d6a756c79253230323031332d726564)](https://camo.githubusercontent.com/addcd18fb44439630d29e4fdeacc5b2b7d02de77/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c617374253230636f6d6d69742d6a756c79253230323031332d726564) | `/github/last-commit/:user/:repo/:branch`                    |
+| GitHub Release Date:                                         | [![GitHub Release Date badge](https://camo.githubusercontent.com/2d3fcd82d99aee6e3dbd8c495c91c8c8f7ab8a57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656c65617365253230646174652d617072696c253230323031372d726564)](https://camo.githubusercontent.com/2d3fcd82d99aee6e3dbd8c495c91c8c8f7ab8a57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656c65617365253230646174652d617072696c253230323031372d726564) | `/github/release-date/:user/:repo`                           |
+| GitHub (Pre-)Release Date:                                   | [![GitHub (Pre-)Release Date badge](https://camo.githubusercontent.com/2d3fcd82d99aee6e3dbd8c495c91c8c8f7ab8a57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656c65617365253230646174652d617072696c253230323031372d726564)](https://camo.githubusercontent.com/2d3fcd82d99aee6e3dbd8c495c91c8c8f7ab8a57/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656c65617365253230646174652d617072696c253230323031372d726564) | `/github/release-date-pre/:user/:repo`                       |
 
-  ```console
-  $ sudo apt-get install coreutils
-  ```
-
-- macOS
-
-  ```console
-  $ brew install coreutils
-  ```
-
-## Usage
-
-Running [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/) requires some extra files, which cannot be generated by Jekyll native commands, so please strictly follow the methods mentioned below to run or deploy your website.
-
-### Initialization
-
-Go to the root directory of the project and start initialization:
-
-```console
-$ bash tools/init.sh
+```
+https://img.shields.io/github/last-commit/powerticket/TIL
 ```
 
-> If you not intend to deploy it on GitHub Pages, append parameter option `--no-gh` at the end of the above command.
+[![img](https://camo.githubusercontent.com/b9c0c19c117ce1f1f1e979cd6f7533be7c22b1ed/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f706f7765727469636b65742f54494c)](https://camo.githubusercontent.com/b9c0c19c117ce1f1f1e979cd6f7533be7c22b1ed/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6173742d636f6d6d69742f706f7765727469636b65742f54494c)
 
-What it does is:
-
-1. Remove some files or directories from your repository:
-
-    - `.travis.yml`
-    - files under `_posts`
-    - folder `docs`
-
-2. If you use the `--no-gh` option, the directory `.github` will be deleted. Otherwise, setup the GitHub Action workflow by removing extension `.hook` of `.github/workflows/pages-deploy.yml.hook`, and then remove the other files and directories in folder `.github`. 
-
-3. Automatically create a commit to save the changes.
-
-### Configuration
-
-Generally, go to `_config.yml` and configure the variables as needed. Some of them are typical options:
-
-- `url`
-- `avatar`
-- `timezone`
-- `theme_mode`
-
-### Run Locally
-
-You may want to preview the site contents before publishing, so just run it by:
-
-```terminal
-$ bash tools/run.sh
+```
+https://img.shields.io/github/commit-activity/w/powerticket/TIL.svg
 ```
 
-Then open a browser and visit to <http://localhost:4000>.
-
-Few days later, you may find that the file changes does not refresh in real time by using `run.sh`. Don't worry, the advanced option `-r` (or `--realtime`) will solve this problem, but it requires [**fswatch**](http://emcrisostomo.github.io/fswatch/) to be installed on your machine.
-
-### Deployment
-
-Before the deployment begins, checkout the file `_config.yml` and make sure the `url` is configured correctly. Furthermore, if you prefer the [*project site*](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) and don't use a custom domain, or you want to visit your website with a base url on a web server other than **GitHub Pages**, remember to change the `baseurl` to your project name that starting with a slash. For example, `/project`.
-
-Assuming you have already gone through the [initialization](#initialization), you can now choose any of the following methods to deploy your website.
-
-#### Deploy on GitHub Pages
-
-For security reasons, GitHub Pages build runs on `safe` mode, which restricts us from using tool scripts to generate additional page files. Therefore, we can use GitHub Actions to build the site, store the built site files on a new branch, and use that branch as the source of the Pages service.
-
-1. Push any commit to `origin/master` to trigger the GitHub Actions workflow. Once the build is complete, a new remote branch called `gh-pages` will appear, which is used to store the built site files.
-2. Unless you prefer to project sites, rename your repository to `<username>.github.io` on GitHub.
-3. Choose branch `gh-pages` as the [publishing source](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) for your GitHub Pages site.
-4. Visit your website at the address indicated by GitHub.
-
-#### Deploy on Other Platforms
-
-On platforms other than GitHub, e.g. GitLab, we cannot enjoy the convenience of **GitHub Actions**. However, we have a tool to make up for this shortcoming.
-
-Commit the changes of your repository first, then run the publish script:
-
-```console
-$ bash tools/publish.sh
-```
-
-> Please note that the *Recent Update* list requires the latest git-log date of posts, thus make sure the changes in `_posts` have been committed before running this command.
-
-It will automatically generates the *Latest Modified Date* and *Categories / Tags* page for the posts and submit a commit, then push to `origin/master`. Its output is similar to the following log:
-
-```terminal
-[INFO] Success to update lastmod for 4 post(s).
-[INFO] Succeed! 3 category-pages created.
-[INFO] Succeed! 4 tag-pages created.
-[INFO] Published successfully!
-```
-
-Lastly, enable the pages service according to the instructions of the platform you choose.
-
-#### Deploy on Private Server
-
-In the root of the source project, build your site by:
-
-```console
-$ bash tools/build.sh -d /path/to/site/
-```
-
-The generated site files will be placed in the root of `/path/to/site/`. Now you should upload those files to your web server, such as Nginx.
-
-### Documentation
-
-For more details and the better reading experience, please check out the [tutorials on demo site](https://chirpy.cotes.info/categories/tutorial/). In the meanwhile, a copy of the tutorial is also available on the [Wiki](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
-
-## Contributing
-
-The old saying, "Two heads are better than one." Consequently, welcome to report bugs, improve code quality or submit a new feature. For more information, see [contributing guidelines](.github/CONTRIBUTING.md).
-
-## Credits
-
-This theme is mainly built with [Jekyll](https://jekyllrb.com/) ecosystem, [Bootstrap](https://getbootstrap.com/), [Font Awesome](https://fontawesome.com/) and some other wonderful tools (their copyright information can be found in the relevant files).
-
-:tada: Thanks to all the volunteers who contributed to this project, their GitHub IDs are on [this list](https://github.com/cotes2020/jekyll-theme-chirpy/graphs/contributors). Also, I won't forget those guys who submitted the issues or unmerged PR because they reported bugs, shared ideas or inspired me to write more readable documentation.
-
-## Support
-
-If you enjoy this theme or find it helpful, please consider becoming my sponsor, I'd really appreciate it! Click the button <kbd>:heart: Sponsor</kbd> at the top of the [Home Page](https://github.com/cotes2020/jekyll-theme-chirpy) and choose a link that suits you to donate; this will encourage and help me better maintain the project.
-
-## License
-
-This work is published under [MIT](https://github.com/cotes2020/jekyll-theme-chirpy/blob/master/LICENSE) License.
+[![img](https://camo.githubusercontent.com/663e982a07a5cd38946836356bde1651b0df2a8b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6d6d69742d61637469766974792f772f706f7765727469636b65742f54494c2e737667)](https://camo.githubusercontent.com/663e982a07a5cd38946836356bde1651b0df2a8b/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f636f6d6d69742d61637469766974792f772f706f7765727469636b65742f54494c2e737667)
