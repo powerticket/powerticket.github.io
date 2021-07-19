@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Git branch"
 date: 2020-09-19 17:00:00 +0900
 categories: [Git, branch]
@@ -46,9 +47,8 @@ Master는 프로젝트의 가장 중요한 중심 프로그램이다. Branch는 
 
 ### Merge condition
 
-1. branch 분기 이후 master의 commit이 없을 때 - Fast-forward 방식으로 merging 한다.
+1. branch 분기 이후 master의 commit이 없을 때, Fast-forward 방식으로 merging 한다.
 2. branch 분기 이후 master의 commit이 있지만 code의 충돌이 없을 때, recursive 방식으로 Auto-merging 한다.
 3. branch 분기 이후 master의 commit이 있고, code의 충돌이 있을 때, 충돌된 부분을 보여주고 직접 수정하여 merging 한다. 자동으로 병합되지 않으므로 수정 후, 다시 commit 한다.
 
-![image-20200918103638842](/assets/img/2020-09-18-git-branch.assets/image-20200918103638842.png)
-
+![image-20200918103638842](C:\Users\jeon\git\powerticket.github.io\_posts\git\2020-09-19-git-branch.assets\image-20200918103638842.png)
